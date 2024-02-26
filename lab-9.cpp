@@ -4,7 +4,8 @@
 #include <stdlib.h>
 using namespace std;
 
-template<typename T, typename U> void pattern(T arr[], int a, U b, int x)
+template <typename T, typename U>
+void pattern(T arr[], int a, U b, int x)
 {
     int count = 0;
 
@@ -80,7 +81,6 @@ template<typename T, typename U> void pattern(T arr[], int a, U b, int x)
             }
         }
         break;
-
     }
 
     cout << count;
@@ -92,7 +92,7 @@ int main()
     clock_t start, end;
     start = clock();
 
-    int numbers0[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 1000 };
+    int numbers0[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 1000};
 
     pattern(numbers0, 10, 'a', 0);
     pattern(numbers0, 10, 4, 1);
@@ -104,7 +104,7 @@ int main()
 
     cout << endl;
 
-    bool numbers1[10] = { true, true, true, false, false, true, false, true, false, true };
+    bool numbers1[10] = {true, true, true, false, false, true, false, true, false, true};
 
     pattern(numbers1, 10, 'a', 0);
     pattern(numbers1, 10, 4, 1);
@@ -116,7 +116,7 @@ int main()
 
     cout << endl;
 
-    char numbers2[11] = { 'a', 'b', 'c', 'd', 'i', 'f', 'g', 'h', 'x', 'y', 'z'};
+    char numbers2[11] = {'a', 'b', 'c', 'd', 'i', 'f', 'g', 'h', 'x', 'y', 'z'};
 
     pattern(numbers2, 11, 'x', 0);
     pattern(numbers2, 11, 4, 1);
