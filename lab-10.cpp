@@ -1,51 +1,44 @@
 #include <iostream>
 using namespace std;
 
-template<typename T>
+template <typename T>
 class Node
 {
 public:
+	T data;
+	Node<T> *prev, *next;
 
-	double data;
-	Node<T>* prev, * next;
-
-public:
-
-	Node(double data)
+	Node(T data)
 	{
 		this->data = data;
 		this->prev = this->next = NULL;
 	}
 };
 
-template<typename T>
-class Linkedlist
+template <typename T>
+class List
 {
 public:
-
-	Node<T>* head, * tail;
+	Node<T> *head, *tail;
 	int Size;
 
-public:
-
-	Linkedlist();
-	~Linkedlist();
-	Node<T>* push_front(T data);
-	Node<T>* push_back(T data);
+	List();
+	~List();
+	Node<T> *push_front(T data);
+	Node<T> *push_back(T data);
 	void pop_front();
 	void pop_back();
 	int GetSize() { return Size; }
-
 };
 
-template<typename T>
-Linkedlist<T>::Linkedlist()
+template <typename T>
+List<T>::List()
 {
 	head = tail = NULL;
 }
 
-template<typename T>
-Linkedlist<T>::~Linkedlist()
+template <typename T>
+List<T>::~List()
 {
 	while (head != NULL)
 	{
@@ -53,10 +46,10 @@ Linkedlist<T>::~Linkedlist()
 	}
 }
 
-template<typename T>
-Node<T>* Linkedlist<T>::push_front(T data)
+template <typename T>
+Node<T> *List<T>::push_front(T data)
 {
-	Node<T>* ptr = new Node<T>(data);
+	Node<T> *ptr = new Node<T>(data);
 	ptr->next = head;
 	if (head != NULL)
 		head->prev = ptr;
@@ -67,10 +60,10 @@ Node<T>* Linkedlist<T>::push_front(T data)
 	return ptr;
 }
 
-template<typename T>
-Node<T>* Linkedlist<T>::push_back(T data)
+template <typename T>
+Node<T> *List<T>::push_back(T data)
 {
-	Node<T>* ptr = new Node<T>(data);
+	Node<T> *ptr = new Node<T>(data);
 	ptr->prev = tail;
 	if (tail != NULL)
 		tail->next = ptr;
@@ -81,15 +74,15 @@ Node<T>* Linkedlist<T>::push_back(T data)
 	return ptr;
 }
 
-template<typename T>
-void Linkedlist<T>::pop_front()
+template <typename T>
+void List<T>::pop_front()
 {
 	if (head == NULL)
 	{
 		return;
 	}
 
-	Node<T>* ptr = head->next;
+	Node<T> *ptr = head->next;
 
 	if (ptr != NULL)
 	{
@@ -105,15 +98,15 @@ void Linkedlist<T>::pop_front()
 	head = ptr;
 }
 
-template<typename T>
-void Linkedlist<T>::pop_back()
+template <typename T>
+void List<T>::pop_back()
 {
 	if (tail == NULL)
 	{
 		return;
 	}
 
-	Node<T>* ptr = tail->prev;
+	Node<T> *ptr = tail->prev;
 
 	if (ptr != NULL)
 	{
@@ -131,7 +124,7 @@ void Linkedlist<T>::pop_back()
 
 int main()
 {
-	Linkedlist<double> first;
+	List<double> first;
 	first.push_back(1.0);
 	first.push_back(3.0);
 	first.push_back(10.0);
@@ -150,5 +143,3 @@ int main()
 		cout << endl;
 	}
 }
-
-
