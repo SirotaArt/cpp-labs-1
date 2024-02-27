@@ -1,7 +1,4 @@
 #include <iostream>
-#include <time.h>
-#include <stdio.h>
-#include <stdlib.h>
 using namespace std;
 
 template <typename T, typename U>
@@ -89,9 +86,6 @@ void pattern(T arr[], int a, U b, int x)
 
 int main()
 {
-    clock_t start, end;
-    start = clock();
-
     int numbers0[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 1000};
 
     pattern(numbers0, 10, 'a', 0);
@@ -127,8 +121,4 @@ int main()
     pattern(numbers2, 11, 2, 6);
 
     cout << endl;
-
-    end = clock();
-
-    printf("%.4f second(s)\n", ((double)end - start) / ((double)CLOCKS_PER_SEC));
 }
