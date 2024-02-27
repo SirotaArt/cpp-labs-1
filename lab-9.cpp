@@ -121,4 +121,5 @@ int main()
     pattern(numbers2, 11, 2, 6);
 
     cout << endl;
+    system("Pause");
 }

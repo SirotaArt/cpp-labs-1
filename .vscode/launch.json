@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/O.T.S.O.S.I.M.B.A/Desktop/HSE.git/cpp-labs-2",
-      "program": "c:/Users/O.T.S.O.S.I.M.B.A/Desktop/HSE.git/cpp-labs-2/build/Debug/outDebug",
+      "cwd": "extension-output-ms-vscode.cpptools-#2-Предупреждения конфигурации C",
+      "program": "extension-output-ms-vscode.cpptools-#2-Предупреждения конфигурации C/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
