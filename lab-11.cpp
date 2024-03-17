@@ -34,7 +34,7 @@ int main()
 {
 
     cout << endl
-         << "Task 1" << endl;
+        << "Task 1" << endl;
     cout << "Enter the values. To end the set, enter stop" << endl;
 
     vector<int> A;
@@ -95,18 +95,12 @@ int main()
     cout << "Lenght: " << lenght << endl;
 
     // 2
-    cout << endl
-         << "Task 2" << endl;
+    cout << endl << "Task 2" << endl;
 
-    vector<int> B = {1, 3, 4};
+    vector<int> B = { 1, 3, 4 };
 
     back_insert_iterator<vector<int>> back_inserter(B);
     *back_inserter = 5;
-    print(B);
-    cout << endl;
-
-    front_insert_iterator<vector<int>> front_inserter(B);
-    *front_inserter = 0;
     print(B);
     cout << endl;
 
@@ -115,25 +109,23 @@ int main()
     print(B);
     cout << endl;
 
-    B.erase(B.end());
+    B.erase(B.begin());
     print(B);
     cout << endl;
 
-    deque<int> H = {99, 100};
 
-    back_insert_iterator<deque<int>> back_inserter(H);
-    *back_inserter = 101;
+    deque<int> H = { 99, 100 };
+
+    back_insert_iterator<deque<int>> front_inserter(H);
+    *front_inserter = 101;
     print(H);
     cout << endl;
-
-    H.erase(H.end());
-    print(H);
-    cout << endl;
-
+    
+    
     // 3
     cout << endl
-         << "Task 3" << endl;
-    vector<int> C = {10, 11, 12};
+        << "Task 3" << endl;
+    vector<int> C = { 10, 11, 12 };
 
     ofstream txt_2("file2.txt", ios_base::out);
 
@@ -157,7 +149,7 @@ int main()
     }
 
     vector<int> D;
-    ifstream txt_1("file1.txt");
+    ifstream txt_1("file2.txt");
     int y;
 
     while (txt_1 >> y)
@@ -167,14 +159,13 @@ int main()
 
     txt_1.close();
     print(D);
-
+   
     // 4
-    cout << endl
-         << "Task 4" << endl;
+    cout << endl << "Task 4" << endl;
     deque<int> deque;
-    vector<int> vector = {7, 8, 9};
+    vector<int> vector = { 7, 8, 9 };
 
-    std::vector<int>::iterator vector_iter = vector.begin(); // Копирование из вектора в очередь
+    std::vector<int>::iterator vector_iter = vector.begin(); 
 
     while (vector_iter != vector.end())
     {
@@ -186,7 +177,7 @@ int main()
 
     // 5
     cout << endl
-         << "Task 5" << endl;
+        << "Task 5" << endl;
 
     std::vector<int> E;
     cout << "Enter the values. To end the set, enter stop" << endl;
