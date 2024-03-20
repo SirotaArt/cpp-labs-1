@@ -32,11 +32,6 @@ void print(deque<int> B)
 
 int main()
 {
-
-    cout << endl
-         << "Task 1" << endl;
-    cout << "Enter the values. To end the set, enter stop" << endl;
-
     vector<int> A;
     int n = 0;
 
@@ -45,7 +40,7 @@ int main()
         string a;
         cin >> a;
 
-        if (a == "stop")
+        if (a == "0")
         {
             n = 1;
             break;
@@ -58,7 +53,7 @@ int main()
         }
     }
 
-    cout << "Vector: ";
+    cout << "Vector_1: ";
     print(A);
     cout << endl;
 
@@ -66,12 +61,12 @@ int main()
     vector<int>::iterator iter_2 = A.end();
 
     sort(iter_1, iter_2);
-    cout << "Sorted vector: ";
+    cout << "Vector_1 (sort): ";
     print(A);
     cout << endl;
 
     reverse(iter_1, iter_2);
-    cout << "Reversed vector: ";
+    cout << "Vector_1 (rev): ";
     print(A);
     cout << endl;
 
@@ -91,13 +86,10 @@ int main()
         }
     }
 
-    cout << "Sum: " << sum << endl;
-    cout << "Lenght: " << lenght << endl;
+    cout << "Vector_1 (sum): " << sum << endl;
+    cout << "Vector_1 (len): " << lenght << endl;
 
     // 2
-    cout << endl
-         << "Task 2" << endl;
-
     vector<int> B = {1, 3, 4};
 
     back_insert_iterator<vector<int>> back_inserter(B);
@@ -122,8 +114,6 @@ int main()
     cout << endl;
 
     // 3
-    cout << endl
-         << "Task 3" << endl;
     vector<int> C = {10, 11, 12};
 
     ofstream txt_2("file2.txt", ios_base::out);
@@ -144,7 +134,7 @@ int main()
 
     else
     {
-        cout << "Error";
+        cout << "Ошибка";
     }
 
     vector<int> D;
@@ -160,8 +150,6 @@ int main()
     print(D);
 
     // 4
-    cout << endl
-         << "Task 4" << endl;
     deque<int> deque;
     vector<int> vector = {7, 8, 9};
 
@@ -176,11 +164,7 @@ int main()
     print(deque);
 
     // 5
-    cout << endl
-         << "Task 5" << endl;
-
     std::vector<int> E;
-    cout << "Enter the values. To end the set, enter stop" << endl;
     int g = 0;
 
     while (g == 0)
@@ -188,7 +172,7 @@ int main()
         string a;
         cin >> a;
 
-        if (a == "stop")
+        if (a == "0")
         {
             g = 1;
             break;
