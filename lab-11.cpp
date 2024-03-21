@@ -89,7 +89,7 @@ int main()
     cout << "Vector_1 (sum): " << sum << endl;
     cout << "Vector_1 (len): " << lenght << endl;
 
-    // 2
+    //2
     vector<int> B = {1, 3, 4};
 
     back_insert_iterator<vector<int>> back_inserter(B);
